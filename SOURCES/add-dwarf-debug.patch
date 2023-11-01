@@ -1,0 +1,24 @@
+diff -ru lame-3.100/configure lame-3.100.new/configure
+--- lame-3.100/configure	2017-08-15 17:17:12.000000000 +0200
++++ lame-3.100.new/configure	2018-10-09 11:19:37.573591392 +0200
+@@ -17359,7 +17359,7 @@
+ 		;;
+ 	*)
+ 		CYGWIN=no
+-		NASM_FORMAT="-f elf"
++		NASM_FORMAT="-f elf -gdwarf"
+ 		;;
+ esac
+ 
+diff -ru lame-3.100/configure.in lame-3.100.new/configure.in
+--- lame-3.100/configure.in	2017-08-15 17:16:31.000000000 +0200
++++ lame-3.100.new/configure.in	2018-10-09 11:20:48.290147258 +0200
+@@ -766,7 +766,7 @@
+ 		;;
+ 	*)
+ 		CYGWIN=no
+-		NASM_FORMAT="-f elf"
++		NASM_FORMAT="-f elf -gdwarf"
+ 		;;
+ esac
+ 
